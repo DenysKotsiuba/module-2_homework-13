@@ -1,0 +1,30 @@
+{% extends "quotes/base.html" %}
+
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}}" role="alert">
+        {{message}}
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% if form.errors %}
+    <div class="alert alert-danger" role="alert">
+        {{form.non_field_errors}}
+    </div>
+    {% endif %}
+    <div class="mb-3">
+        <label class="form-label w-100">Username</label>
+        {{form.username}}
+    </div>
+    <div class="mb-3">
+        <label class="form-label w-100">Password</label>
+        {{form.password}}
+    </div>
+    <button type="submit" class="btn btn-primary">Sign in</button>
+</form>
+
+{% endblock %}
