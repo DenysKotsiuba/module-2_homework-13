@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "homework-10"
+version = "0.1.0"
+description = ""
+authors = ["Denys Kotsiuba"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "~3.11"
+Django = "4.2.2"
+pymongo = "~4.4.0"
+psycopg2-binary = "~2.9.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
