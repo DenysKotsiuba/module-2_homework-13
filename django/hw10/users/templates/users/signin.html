@@ -25,6 +25,9 @@
         {{form.password}}
     </div>
     <button type="submit" class="btn btn-primary">Sign in</button>
+    <div class="small text-center">
+        <a href="{% url "users:password_reset" %}" class="text-center"><i>Forgot Password?</i></a>
+    </div>
 </form>
 
 {% endblock %}
